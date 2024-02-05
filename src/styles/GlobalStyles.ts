@@ -52,9 +52,10 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     cursor: pointer;
-    padding: 0;
+    padding: 10px;
     background-color: unset;
-    border: none;
+    border: 1px solid indianred;
+    border-radius: 10px;
     color: ${theme.colors.white}
   }
 

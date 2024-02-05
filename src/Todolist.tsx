@@ -26,7 +26,7 @@ export const Todolist: React.FC<TodolistType> = (props) => {
             <ul>
                 {props.tasks.map(v => {
                     return (
-                        <li style={{padding: "10px"}}
+                        <li style={{padding: "10px", display: "flex", gap: "10px", alignItems: "center"}}
                             key={v.id}><input type="checkbox"
                                               defaultChecked={v.isDone}
                                               onClick={() => {
@@ -35,7 +35,7 @@ export const Todolist: React.FC<TodolistType> = (props) => {
                         /> <span>{v.title}</span>
                             <button onClick={() => {
                                 props.removeTask(v.id)
-                            }}>&nbsp;&nbsp;X
+                            }}>X
                             </button>
                         </li>
                     )
