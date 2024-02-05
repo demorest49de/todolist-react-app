@@ -48,7 +48,7 @@ function App() {
 
         const index = tasks.findIndex(task => task.id === id);
         tasks[index].isDone = isChecked;
-
+        debugger
         setTasks(tasks)
     }
 
