@@ -3,25 +3,34 @@ import './App.css';
 import {Todolist} from "./Todolist";
 
 
-const tasks1 = [
+let tasks = [
     {id: 1, title: "HTML&CSS", isDone: true},
     {id: 2, title: "JS", isDone: true},
-    {id: 3, title: "ReactJS", isDone: false}
-]
-const tasks2 = [
-    {id: 1, title: "Hello world", isDone: true},
-    {id: 2, title: "I am Happy", isDone: false},
-    {id: 3, title: "Yo", isDone: false}
+    {id: 3, title: "ReactJS", isDone: false},
+    {id: 4, title: "Redux", isDone: false}
 ]
 
 function App() {
     return (
         <div className="App">
-            <Todolist title="What to learn" tasks={tasks1}/>
-            <Todolist title="Songs" tasks={tasks2}/>
-            {/*<Todolist title = "Books"/>*/}
+            <Todolist title="What to learn"
+                      tasks={tasks}
+                      removeTask={removeTask}
+            />
         </div>
     );
+}
+
+function removeTask(id: number) {
+    // tasks = tasks.filter(task => {
+    //     if (task.id === id) {
+    //         return true
+    //     } else {
+    //         return false
+    //     }
+    // })
+    let result = tasks.filter(task => task.id !== id)
+    console.log(' tasks: ', result);
 }
 
 export default App;

@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 
     //  esli nuzhno posmotret kakoy block vilazit na adaptive
 
-    outline: 1px solid indianred;
+    //outline: 1px solid indianred;
   }
 
   html {
