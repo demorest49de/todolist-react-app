@@ -26,12 +26,6 @@ function App() {
     let [tasks, setTasks] = useState<Array<TasksType>>(initTasks)
     let [filter, setFilter] = useState<FilterValuesType>("all")
 
-    // let [checkedTasks, setChecked] = useState<Array<TasksType>>(tasks)
-
-
-    function changeFilter(value: FilterValuesType) {
-        setFilter(value)
-    }
 
     let tasksForRender: Array<TasksType> = tasks;
 
@@ -45,6 +39,10 @@ function App() {
             break;
     }
 
+
+    function changeFilter(value: FilterValuesType) {
+        setFilter(value)
+    }
 
     function changeIsChecked(id: number, isChecked: boolean) {
 
