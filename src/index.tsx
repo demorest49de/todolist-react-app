@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import ReactDom2 from 'react-dom'
 // import './index.css';
 import App from './App';
 import {ThemeProvider} from "styled-components";
@@ -17,5 +16,3 @@ root.render(
         <App/>
     </ThemeProvider>
 );
-
-// ReactDom2.render(<Counter/>, document.querySelector('#root'))

@@ -3,14 +3,6 @@ import './App.css';
 import {TasksType, Todolist} from "./Todolist";
 
 
-// export function Counter() {
-//     console.log("Counter rendered");
-//     const [data, setData] = useState(5);
-//
-//     return <div onClick={() => {
-//         setData(data + 1)
-//     }}>{data}</div>
-// }
 export type FilterValuesType = "all" | "completed" | "active";
 
 function App() {
@@ -45,12 +37,13 @@ function App() {
     }
 
     function changeIsChecked(id: number, isChecked: boolean) {
-
-        const index = tasks.findIndex(task => task.id === id);
-        tasks[index].isDone = isChecked;
-        debugger
-        setTasks(tasks)
+        const newArray =tasks.map(task => task.id === id ? {...task, isDone: isChecked} : task)
+        setTasks(newArray)
     }
+
+    console.log( {...tasks[0]});
+    console.log([...tasks]);
+    console.log( {...tasks[0], isDone: false, title: 'blabla'});
 
     function removeTask(id: number) {
         tasks = tasks.filter(task => task.id !== id)
